@@ -1,0 +1,270 @@
+body{
+	padding: 0px;
+	margin : 0px;
+	display: flex;
+}
+
+hr {
+	margin: 0px;
+	margin-bottom: 20px;
+}
+
+.main-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.left-container {
+	width: 50%;
+	height: 100vh;
+	z-index: 2;
+	/* border-radius: 0px 0px 150px 0px; */
+	position: relative;
+	background-clip: border-box;
+	display: flex;
+	align-items: flex-end;
+	background-image: url('../img/image2.jpg');
+	
+}
+
+
+.right-container {
+	display: flex;
+	z-index: 1;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.login-container {
+	display: flex;
+	min-width: 350px;
+	padding: 10px;
+	border-radius: 10px;
+	border: 0px solid var(--light-gray);
+	width: 50%;
+	height: 60%;
+	min-height: 300px;
+	justify-content: center;
+}
+
+.login-container form {
+	display: flex;
+	flex-direction: column;
+	min-width: 300px;
+	width: 80%;
+	height: 100%;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.input-icon.email::before {
+	content: "mail_outline";
+}
+
+.input-icon.pass::before {
+	content: "lock";
+}
+
+.input-icon.r-pass::before{
+	font-family: 'Material Symbols Outlined';
+	content: "lock_open";
+	font-variation-settings:
+	  'FILL' 1,
+	  'wght' 400,
+	  'GRAD' 200,
+	  'opsz' 48;
+}
+
+#r-passwd{
+	margin-bottom: 2px;
+}
+#r-passwd-icon{
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+#r-passwd-icon > div > ul{
+	padding: 0px;
+	margin-top: 10px;
+	padding-left: 32px; 
+}
+#r-passwd-icon > div > ul > li{
+	font-weight: bold;
+	color: #b70000;
+	margin-bottom: 2px;
+}
+
+.login-extra {
+	width: 100%;
+}
+
+.login-link {
+	margin-top: 10px;
+	color: var(--dark-gray);
+}
+
+.login-link:hover {
+	margin-top: 10px;
+	color: var(--darker-gray);
+}
+
+.tr-link {
+	font-size: 16px;
+	font-weight: bold;
+	position: absolute;
+	cursor: pointer;
+	--webkit-user-select: none;
+	user-select: none;
+	top: 30px;
+	right: 40px;
+}
+
+.tr-link div {
+	color: var(--dark-gray);
+}
+
+.tr-link div:hover {
+	color: var(--darker-gray);
+}
+
+
+
+@media (max-width: 760px) {
+
+	.main-container {
+		flex-direction: column-reverse;
+	}
+
+	.right-container {
+		z-index: 2;
+		width: 100%;
+		background-color: transparent;
+	}
+
+	.left-container {
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+		width: 100%;
+	}
+
+	.login-container {
+		width: 40%;
+		height: 60%;
+	}
+
+	.in-t1 {
+		/*background-color: #cccccccc;*/
+		color: var(--dark-gray);
+	}
+
+	.login-link {
+		color: var(--light-gray);
+	}
+
+	.login-link:hover {
+		color: var(--lighter-gray);
+	}
+
+	.tr-link div {
+		color: var(--light-gray);
+	}
+
+	.tr-link div:hover {
+		color: var(--lighter-gray)
+	}
+}
+
+#brief-profile{
+	display: flex;
+    border-radius: 25px;
+    background-image: var(--light-gray-gradient);
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    display: none;
+}
+
+.circle{
+	width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    margin-left: 13px;
+    color: var(--dark-gray);
+}
+
+.bp-detail-container {
+    margin-left: 20px;
+}
+
+.bp-email {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: absolute;
+   	top: 20px;
+   left:calc(50% - 90px + 50px);
+}
+
+.bp-type {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 15px;
+    left:calc(50% - 90px + 50px);
+}
+
+.bp-type > label{
+	margin: 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideOut {
+	0% {
+		transform: translateX(0);
+		opacity: 1
+	}
+
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+		display:none;
+	}
+}
+
+.slideIn {
+	animation: slideIn 0.5s forwards;
+}
+
+.slideOut {
+	animation: slideOut 0.5s forwards;
+}

@@ -1,0 +1,25 @@
+footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        width: 100%;
+        opacity: 0.9;   
+    }
+
+    footer h2 {
+        margin: 0;
+    }
+
+    footer nav {
+        margin-top: 10px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    footer nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
